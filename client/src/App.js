@@ -14,12 +14,12 @@ const App = () => {
   return (
     <div>
       <SavedList list={savedList} />
-      <Route path='/'>
-          <MovieList />
-      </Route>
       <Route path='/movies/:id'>
         <Movie />
         {/* {debugger} */}
+      </Route>
+      <Route exact path='/'>
+          <MovieList />
       </Route>
     </div>
   );
